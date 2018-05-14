@@ -9,7 +9,7 @@ pygame.init()
 clock = pygame.time.Clock()
 
 if __name__ == "__main__":
-	obs = [Obstacle.Obstacle(250, 300, 750, 50, screen), Obstacle.Obstacle(250, 0, 50, 300, screen)]
+	obs = [Obstacle.Obstacle(250, 300, 750, 50, screen)]
 	factory = DotFactory.DotFactory(screen.get_width()/2, screen.get_height() - 50, screen.get_width()/2, 50, screen, 1000, obs)
 
 	while factory.gen < 10:
