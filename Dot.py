@@ -8,6 +8,8 @@ class Dot:
 		self.y = y
 		self.xv = xv
 		self.yv = yv
+		self.xvi = xv
+		self.yvi = yv
 		self.gx = gx
 		self.gy = gy
 		self.steps = 0
@@ -50,7 +52,7 @@ class Dot:
 		return fitness
 
 	def clone(self, x, y):
-		return Dot(x, y, -1*self.xv, self.yv, self.gx, self.gy, self.screen, self.obs)
+		return Dot(x, y, self.xvi, self.yvi, self.gx, self.gy, self.screen, self.obs)
 
 	def mutate(self, rate):
 		if r() < rate:
